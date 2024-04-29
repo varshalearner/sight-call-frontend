@@ -10,7 +10,7 @@ export const useSocket = () => {
 
 export const SocketProvider = (props) => {
     // socket baar baar initialise nh ho islea 
-    const socket = useMemo(()=>io('localhost:8000'),[])
+    const socket = useMemo(()=>io('https://sight-call-backend.onrender.com'),[])
     //socket server
     return (<SocketContext.Provider value={socket}>
         {props.children}
